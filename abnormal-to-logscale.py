@@ -49,7 +49,7 @@ def siemFeed(jsonData):
     req = requests.post(dstUrl, headers=dstHeaders, json=jsonData)
     res = req.status_code
 
-    print(str(res) + "\n\n" + str(req))
+    print(str(res))
 
 # Test payload for when no events exist
 def nePayload(ep, code):
@@ -92,13 +92,7 @@ def getEvents(ep, params):
     cat = list(res)[0]
     
     for events in res[cat]:
-        match ep:
-            case "cases":
-                    doNothing() if not res[cat] else getEventDetails(ep, events) # Normally doNothing() or nePayload(ep, code) for testing
-            case "vendor-cases":
-                    doNothing() if not res[cat] else getEventDetails(ep, events) # Normally doNothing() or nePayload(ep, code) for testing
-            case "abusecampaigns":
-                    doNothing() if not res[cat] else getEventDetails(ep, events) # Normally doNothing() or nePayload(ep, code) for testing             
+        doNothing() if not res[cat] else getEventDetails(ep, events) # Normally doNothing() or nePayload(ep, code) for testing           
 
 # Get request parameters per endpoint
 def getReqs(ep):
