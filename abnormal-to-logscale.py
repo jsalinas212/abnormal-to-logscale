@@ -25,8 +25,8 @@ srcHeaders = {
 
 
 # Destination API settings
-coTenant = os.environ.get('COTENANT')
-dstUrl = str(coTenant) + ".ingest.logscale.us-1.crowdstrike.com/api/v1/ingest/json"
+orgTenant = os.environ.get('ORGTENANT')
+dstUrl = "https://" + str(orgTenant) + ".ingest.logscale.us-1.crowdstrike.com/api/v1/ingest/json"
 dstToken = os.environ.get('DSTTOKEN')
 dstHeaders = {
     "Content-Type": "application/json",

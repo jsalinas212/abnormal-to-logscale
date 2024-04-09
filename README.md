@@ -31,7 +31,7 @@ Add a `.env` file in the same directory as the script.
 ```
 SRCTOKEN={Abnormal Security API Token}
 DSTTOKEN={LogScale Repository Ingest Token}
-COTENANT={https://LOGSCALETENANT}
+ORGTENANT={LogScale Org Tenant}
 ```
 
 Adjust how far back you would like to fetch results by adusting the time delta function.
