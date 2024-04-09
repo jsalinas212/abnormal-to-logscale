@@ -77,4 +77,4 @@ The solution still works in Python version 3.13, but it complains about `utcnow(
 
 ## License
 
-[LICENSE.md](GPL-3.0 license)
+[GPL-3.0 license](./LICENSE.md)
